@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones torneo</title>
+</head>
+<body>
+    <h1>Registro para hackaton</h1>
+    <form> <table border="1" cellpadding = "5"> 
+ <!--Linea 1 -->
+ 
+        <tr>
+            <th>Nombre del jugador:</th>
+            <th> <input type="Text" placeholder="Ingresa tu nombre" minlength="3" maxlength="15" required </th><!--minlength para poner minímo de caracteres y manlength para poner máximo de caracteres --> 
+
+        </tr>
+<!-- Linea 2-->
+        <tr>
+            <th>Correo:</th>
+            <th><input type="email" placeholder="Ingresa tu email "required </th>
+
+        </tr>
+<!-- Linea 3-->
+        <tr>
+            <th>Edad:</th>
+            <th> <input type="number" min="12" max="40"> </th>
+
+        </tr>
+<!-- Linea 4-->
+        <tr>
+            <th>Nickname:</th>
+            <th> 
+                <input type="text" pattern="[A-Za-z0-9]+"
+                name="Nickname:" placeholder="Solo letras y números" required>
+            </th>
+
+        </tr>
+<!-- Linea 5-->
+        <tr>
+            <th> Categoría:</th>
+            <th>  <input type="Radio" name="Categoría:" value="Principiante" required >Principiante
+            <input type="Radio" name="Categoría:" value="Intermedio">Intermedio 
+        <input type="Radio" name="Categoría:" value="Experto">Experto</th>
+            <!--El value se pone para cuando seleccionen esa opcion, el programa sepa que fue seleccionada, pero no lo ven los usuarios  --> 
+           <!--El type radio me ayuda a que el usuario solo seleccione una opcióm, radio button se llama (es lo que hace que salga el circulito)  --> 
+
+
+        </tr>
+<!-- Linea 6-->
+        <tr>
+            <th>Juegos favoritos:</th>
+            <th> <input type="checkbox" name="Juegofavorito" value="FIFA">FIFA 
+            <input type="checkbox" name="Juegofavorito" value="LoL">LoL
+            <input type="checkbox" name="Juegofavorito" value="Minecraft">Minecraft 
+            </th>
+            <!--El checkbox permite seleccionar varias casillas y es necesario poner un name aparte porque precisamente cada ves que alguien seleccione una casilla aparecere Juegos favoritos:FIFA, si alguien selecciona más de una saldra 2 veces Juegos favoritos:FIFA y Juegos favoritos:LoL, asi lo verá el código y lo almacenará--> 
+
+
+        </tr>
+<!-- Linea 7-->
+        <tr>
+            <th> Fecha de inscripción:</th>
+            <th> <input type="Date" 
+                max="2025-12-31"> </th>
+
+
+        </tr>
+        <td colspan="2" align="center">
+            <input type="Submit" name="Enviar"
+            value="Enviar">
+            <input type="reset" name="Restablecer" value="Restablecer">
+            
+            </td>
+
+
+    </table>
+</form>
+    
+</body>
+</html>
